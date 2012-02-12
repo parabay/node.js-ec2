@@ -1,5 +1,7 @@
 # EC2 web app template
 
+FORKED FROM https://github.com/rsms/ec2-webapp
+
 This is a template I use to quickly set up Node.js-backed web apps on Amazon EC2
 
 - Less than 15 minutes from start to finish
