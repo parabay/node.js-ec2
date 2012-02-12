@@ -1,7 +1,7 @@
 var simpledb = require('simpledb')
 
 var sdb = new simpledb.SimpleDB(
-  {keyid:'1WV27TXAW7F9DAWTNHR2',secret:'0gYaL9Ea4CKnQqbqcLj0x5MJZYURxNw0+G/82V0h'},
+  {keyid:'',secret:''},
   simpledb.debuglogger
 )
 
