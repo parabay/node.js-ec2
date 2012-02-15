@@ -9,8 +9,8 @@ var express = require('express')
   , GoogleStrategy = require('passport-google-oauth').OAuth2Strategy
   , routes = require('./routes');
 
-var GOOGLE_CLIENT_ID = "965137897257.apps.googleusercontent.com";
-var GOOGLE_CLIENT_SECRET = "8mzihWcqKgtYbOR2J3D51_8E";
+var GOOGLE_CLIENT_ID = "id";
+var GOOGLE_CLIENT_SECRET = "password";
 
 
 // Passport session setup.
@@ -85,13 +85,11 @@ app.configure('production', function(){
 
 // Routes
 
-/*
-app.get('/', routes.start);
+app.get('/start', routes.start);
 app.post('/upload', routes.upload);
 app.get('/show', routes.show);
-*/
 
-app.get('/', function(req, res){
+app.get('/home', function(req, res){
   console.log('home page');
   res.render('index', { user: req.user });
 });
@@ -125,13 +123,13 @@ app.get('/auth/google',
 app.get('/auth/google/callback', 
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
-	console.log('passport - before redirect to /');
-    res.redirect('/');
+	console.log('passport - before redirect to /home');
+    res.redirect('/home');
   });
 
 app.get('/logout', function(req, res){
   req.logout();
-  res.redirect('/');
+  res.redirect('/home');
 });
 
 app.listen(3000);
