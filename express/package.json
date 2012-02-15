@@ -3,7 +3,15 @@
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
-      "express": "2.5.8"
-    , "jade": ">= 0.0.1"
+	"connect": ">= 0.0.0",
+	"connect_json": ">= 0.0.0",
+      "express": "2.5.8",
+	  "jade": ">= 0.0.1",
+	  "ejs": ">= 0.0.0",
+	  "passport": ">= 0.0.0",
+	  "passport-local": ">= 0.0.0",
+	  "passport-google-oauth": ">= 0.0.0",
+	  "knox": ">= 0.0.0",
+	  "simpledb": ">= 0.0.0"
   }
 }
